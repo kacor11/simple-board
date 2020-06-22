@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form#btn-form( method='GET' action='/new')
+    button.btn.btn-primary-primary(type='submit') Add
+
+  each msg in messages
+    div
+      p=msg.text
+      p=msg.user
+      p=msg.added
